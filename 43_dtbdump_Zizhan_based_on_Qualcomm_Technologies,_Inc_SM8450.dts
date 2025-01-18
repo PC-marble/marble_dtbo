@@ -1790,7 +1790,7 @@
 				pinctrl-names = "default";
 
 				vol_up {
-					debounce-interval = <0xf>;
+					debounce-interval = <0x20>;
 					gpio-key,wakeup;
 					gpios = <0x20 0x6 0x1>;
 					label = "volume_up";

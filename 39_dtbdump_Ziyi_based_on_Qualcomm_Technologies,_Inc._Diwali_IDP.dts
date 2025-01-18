@@ -295,6 +295,20 @@
 			};
 		};
 
+		fragment@17 {
+
+			__overlay__ {
+
+				gpio_keys {
+					pinctrl-0 = <0x0>;
+
+					vol_up {
+						gpios = <0x0>;
+					};
+				};
+			};
+		};
+
 		fragment@2 {
 
 			__overlay__ {
@@ -2297,6 +2311,23 @@
 		target = <0xffffffff>;
 
 		__overlay__ {
+
+			gpio_keys {
+				compatible = "gpio-keys";
+				label = "gpio-keys";
+				pinctrl-0 = <0x17>;
+				pinctrl-names = "default";
+
+				vol_up {
+					debounce-interval = <0x20>;
+					gpio-key,wakeup;
+					gpios = <0x18 0x6 0x1>;
+					label = "volume_up";
+					linux,can-disable;
+					linux,code = <0x73>;
+					linux,input-type = <0x1>;
+				};
+			};
 
 			mtdoops_pmsg@0xa7000000 {
 				compatible = "mtdoops_pmsg";
