@@ -1905,7 +1905,7 @@
 				pinctrl-names = "default";
 
 				vol_up {
-					debounce-interval = <0xf>;
+					debounce-interval = <0x20>;
 					gpio-key,wakeup;
 					gpios = <0x20 0x6 0x1>;
 					label = "volume_up";
@@ -2404,7 +2404,7 @@
 
 			gamekey {
 				compatible = "xm,gamekey";
-				debounce_time = <0x5>;
+				debounce_time = <0x20>;
 				gamekey_vreg-supply = <0xffffffff>;
 				hall_left = <0xffffffff 0x47 0x0>;
 				hall_right = <0xffffffff 0x3e 0x0>;
